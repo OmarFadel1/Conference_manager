@@ -1,0 +1,58 @@
+
+return Stack(
+      children: <Widget>[
+        DefaultTabController(
+            length: 2,
+            child: SafeArea(
+              child: Scaffold(
+                appBar: AppBar(
+                  backgroundColor: Colors.white,
+                  elevation: 0,
+                  bottom: TabBar(
+                      indicatorColor: KMaiinColor,
+                      onTap: (value) {
+                        setState(() {
+                          _tabBarindex = value;
+                        });
+                      },
+                      tabs: <Widget>[
+                        Text(
+                          'Mershandise',
+                          style: TextStyle(
+                              color: _tabBarindex == 0
+                                  ? Colors.black
+                                  : KUnactiveColor,
+                              fontSize: _tabBarindex == 0 ? 16 : null),
+                        ),
+                        Text(
+                          'Rooming List',
+                          style: TextStyle(
+                              color: _tabBarindex == 1
+                                  ? Colors.black
+                                  : KUnactiveColor,
+                              fontSize: _tabBarindex == 1 ? 16 : null),
+                        )
+                      ]),
+                ),
+              ),
+            )),
+        Material(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+            child: Container(
+              height: MediaQuery.of(context).size.height * .1,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      'Strike'.toUpperCase(),
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Icon(Icons.sports_golf)
+                  ]),
+            ),
+          ),
+        )
+      ],
+    );
