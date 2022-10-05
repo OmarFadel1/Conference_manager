@@ -3,6 +3,7 @@ import 'package:buy_it/screens/admin/admintrackorder.dart';
 import 'package:buy_it/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:buy_it/constants.dart';
+import 'package:sizer/sizer.dart';
 
 class AdminHome extends StatelessWidget {
   static String id = 'AdminHome';
@@ -18,39 +19,33 @@ class AdminHome extends StatelessWidget {
             width: double.infinity,
           ),
           SizedBox(
-            width: 250,
-            height: 70,
-            child: RaisedButton(
+            width: 70.w,
+            height: 15.h,
+            child: ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, SoldMersh.id);
               },
               child: Text(
                 'Track orders',
-                style: TextStyle(color: Colors.white, fontSize: 25),
+                style: TextStyle(color: Colors.white, fontSize: 25.sp),
               ),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-              color: Colors.black,
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 1.h,
           ),
           SizedBox(
-            width: 250,
-            height: 70,
-            child: RaisedButton(
+            width: 70.w,
+            height: 15.h,
+            child: ElevatedButton(
               onPressed: () {
                 Navigator.pop(context, AdminHome.id);
                 Navigator.pushNamed(context, LoginScreen.id);
               },
               child: Text(
                 'Sign out',
-                style: TextStyle(color: Colors.white, fontSize: 25),
+                style: TextStyle(color: Colors.white, fontSize: 25.sp),
               ),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-              color: Colors.black,
             ),
           ),
         ],

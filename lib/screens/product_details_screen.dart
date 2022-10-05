@@ -163,11 +163,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 ),
               ),
             ),
-            FlatButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                color: Colors.black,
+            ElevatedButton(
                 onPressed: () {
                   setState(() {
                     controllerquantity.text.isEmpty

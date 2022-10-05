@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 width: 250,
                 height: 70,
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, Mersh.id);
                   },
@@ -40,9 +40,6 @@ class _HomePageState extends State<HomePage> {
                     'Mershandise',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  color: Colors.black,
                 ),
               ),
               SizedBox(
@@ -51,7 +48,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 width: 250,
                 height: 70,
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, RoomingList.id);
                   },
@@ -59,9 +56,6 @@ class _HomePageState extends State<HomePage> {
                     'Rooming list',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  color: Colors.black,
                 ),
               ),
               SizedBox(
@@ -70,7 +64,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 width: 250,
                 height: 70,
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, EditPage.id);
                   },
@@ -78,9 +72,6 @@ class _HomePageState extends State<HomePage> {
                     'Edit information',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  color: Colors.black,
                 ),
               ),
               SizedBox(
@@ -89,7 +80,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 width: 250,
                 height: 70,
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, Adddelegate.id);
                   },
@@ -97,9 +88,6 @@ class _HomePageState extends State<HomePage> {
                     'Add delegate',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  color: Colors.black,
                 ),
               ),
               SizedBox(
@@ -108,7 +96,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 width: 250,
                 height: 70,
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {
                     Navigator.pop(context, HomePage.id);
 
@@ -118,9 +106,6 @@ class _HomePageState extends State<HomePage> {
                     'Sign out',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  color: Colors.black,
                 ),
               ),
             ],

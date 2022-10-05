@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:buy_it/constants.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:sizer/sizer.dart';
 
 import '../widgets/custom_textfield.dart';
 
@@ -19,8 +20,8 @@ class LoginScreen extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(top: 50),
-              child: Container(
+              padding: EdgeInsets.only(top: 8.h),
+              child: SizedBox(
                 height: MediaQuery.of(context).size.height * .3,
                 child: Stack(
                   alignment: Alignment.center,
@@ -32,7 +33,8 @@ class LoginScreen extends StatelessWidget {
                       bottom: 0,
                       child: Text(
                         'Activate\'22',
-                        style: TextStyle(fontFamily: 'Pacifico', fontSize: 25),
+                        style:
+                            TextStyle(fontFamily: 'Pacifico', fontSize: 20.sp),
                       ),
                     )
                   ],
@@ -51,11 +53,7 @@ class LoginScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 120),
-              child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  color: Colors.black,
+              child: ElevatedButton(
                   onPressed: () {
                     if (_globalkey.currentState!.validate()) {}
                   },

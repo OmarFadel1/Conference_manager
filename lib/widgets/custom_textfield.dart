@@ -2,6 +2,7 @@ import 'package:buy_it/screens/admin/adminHome.dart';
 import 'package:buy_it/screens/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:buy_it/constants.dart';
+import 'package:sizer/sizer.dart';
 
 import '../screens/login_screen.dart';
 import '../screens/signup_screen.dart';
@@ -52,16 +53,16 @@ class CustomTextField extends StatelessWidget {
           filled: true,
           fillColor: KSecondaryColor,
           enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(5.w),
               borderSide: BorderSide(color: Colors.white)),
           focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(5.w),
               borderSide: BorderSide(color: Colors.white)),
           focusedErrorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(5.w),
               borderSide: BorderSide(color: Colors.white)),
           border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(5.w),
               borderSide: BorderSide(color: Colors.white)),
         ),
       ),

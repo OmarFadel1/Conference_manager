@@ -84,7 +84,7 @@ class _AdddelegateState extends State<Adddelegate> {
               controller: controllerLC,
               cursorColor: KMaiinColor,
               decoration: InputDecoration(
-                  errorText: _validateLC ? 'LC Can\'t Be Empty' : null,
+                  errorText: _validateLC ? "LC Can't Be Empty" : null,
                   hintText: 'LC',
                   prefixIcon: Icon(
                     Icons.person,
@@ -145,11 +145,7 @@ class _AdddelegateState extends State<Adddelegate> {
           SizedBox(
             height: 10,
           ),
-          FlatButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-              color: Colors.black,
+          ElevatedButton(
               onPressed: () {
                 setState(() {
                   controllerName.text.isEmpty

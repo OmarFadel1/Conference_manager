@@ -65,11 +65,13 @@ class SignupScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 120),
-              child: FlatButton(
+              child: ElevatedButton(
+
+                  /*
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  color: Colors.black,
+                  */
                   onPressed: () {
                     if (_globalkey.currentState!.validate()) {}
                   },
