@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
                 titleSmall:
                     TextStyle(fontSize: 24, fontFamily: 'RobotoCondensed'),
               ),
-          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.brown)
               .copyWith(secondary: Colors.amber),
         ),
         debugShowCheckedModeBanner: false,

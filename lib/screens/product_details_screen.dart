@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:sizer/sizer.dart';
 
 import '../constants.dart';
 
@@ -40,58 +41,58 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         appBar: AppBar(
           title: Text('${selectedProduct.title}'),
         ),
-        body: Column(
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                height: 300,
+        body: SingleChildScrollView(
+          keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+          child: Column(
+            children: <Widget>[
+              Container(
+                height: 30.h,
                 width: double.infinity,
-                child: Image.network(
+                child: Image.asset(
                   selectedProduct.imageUrl,
                   fit: BoxFit.cover,
                 ),
               ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
-              child: Text(
-                'Price',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(
-                    color: Colors.grey,
-                  ),
-                  borderRadius: BorderRadius.circular(10)),
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(10),
-              height: 70,
-              width: 250,
-              child: Card(
-                color: Theme.of(context).accentColor,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                  child: Text(
-                    selectedProduct.price.toString(),
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                  ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 10),
+                child: Text(
+                  'Price',
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      color: Colors.grey,
+                    ),
+                    borderRadius: BorderRadius.circular(10)),
+                margin: EdgeInsets.all(10),
+                padding: EdgeInsets.all(10),
+                height: 70,
+                width: 250,
+                child: Card(
+                  color: Theme.of(context).colorScheme.secondary,
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                    child: Text(
+                      selectedProduct.price.toString(),
+                      textAlign: TextAlign.center,
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
 
-              // child: ListView.builder(
-              //   itemBuilder: (ctx, index) => Card(
-              //     color: Theme.of(context).accentColor,
-              //     child: Text(selectedProduct.price.toString()),
-              //   ),
-              // ),
-            ),
-            Expanded(
-              child: Container(
+                // child: ListView.builder(
+                //   itemBuilder: (ctx, index) => Card(
+                //     color: Theme.of(context).accentColor,
+                //     child: Text(selectedProduct.price.toString()),
+                //   ),
+                // ),
+              ),
+              Container(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Form(
@@ -125,12 +126,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 3,
-            ),
-            Expanded(
-              child: Container(
+              SizedBox(
+                height: 3,
+              ),
+              Container(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Form(
@@ -162,35 +161,35 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                   ),
                 ),
               ),
-            ),
-            ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    controllerquantity.text.isEmpty
-                        ? _validate = true
-                        : _validate = false;
-                  });
-                  if (_validate == false) {
-                    final prod = sold_product(
-                      name: selectedProduct.title,
-                      quantity: int.parse(controllerquantity.text),
-                      price: selectedProduct.price,
-                      soldby: controllersold.text,
-                    );
-                    soldmersh(prod);
-                    ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Added to sold')));
-                    clearText();
-                    clearText();
-                  }
-                },
-                child: Text(
-                  'Sold',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ))
-          ],
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      controllerquantity.text.isEmpty
+                          ? _validate = true
+                          : _validate = false;
+                    });
+                    if (_validate == false) {
+                      final prod = sold_product(
+                        name: selectedProduct.title,
+                        quantity: int.parse(controllerquantity.text),
+                        price: selectedProduct.price,
+                        soldby: controllersold.text,
+                      );
+                      soldmersh(prod);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(content: Text('Added to sold')));
+                      clearText();
+                      clearText();
+                    }
+                  },
+                  child: Text(
+                    'Sold',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ))
+            ],
+          ),
         ));
   }
 }

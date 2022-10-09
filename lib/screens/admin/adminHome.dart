@@ -20,7 +20,7 @@ class AdminHome extends StatelessWidget {
           ),
           SizedBox(
             width: 70.w,
-            height: 15.h,
+            height: 10.h,
             child: ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, SoldMersh.id);
@@ -36,7 +36,7 @@ class AdminHome extends StatelessWidget {
           ),
           SizedBox(
             width: 70.w,
-            height: 15.h,
+            height: 10.h,
             child: ElevatedButton(
               onPressed: () {
                 Navigator.pop(context, AdminHome.id);

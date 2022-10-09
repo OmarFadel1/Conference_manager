@@ -18,7 +18,7 @@ const DUMMY_CATEGORIES = const [
   Category(
     id: 'c3',
     title: 'Socks',
-    color: Colors.orange,
+    color: Color.fromARGB(255, 92, 80, 63),
   ),
   Category(
     id: 'c4',
@@ -65,7 +65,7 @@ const DUMMY_PRODUCTS = const [
     ],
     price: 100,
     title: 'Confrence T-shirt',
-    imageUrl: 'https://m.media-amazon.com/images/I/41UOwPBXvZL._AC_.jpg',
+    imageUrl: 'images/icons/buyicon.png',
   ),
   product(
     id: 'm2',

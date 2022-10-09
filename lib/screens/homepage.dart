@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.pushNamed(context, RoomingList.id);
                   },
                   child: Text(
-                    'Rooming list',
+                    'Search Delegate',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
                 ),
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.pushNamed(context, EditPage.id);
                   },
                   child: Text(
-                    'Edit information',
+                    'Rooming List',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
                 ),
