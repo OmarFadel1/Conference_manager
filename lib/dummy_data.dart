@@ -57,7 +57,7 @@ const DUMMY_CATEGORIES = const [
   // ),
 ];
 
-const DUMMY_PRODUCTS = const [
+List<product> DUMMY_PRODUCTS = [
   product(
     id: 'm1',
     categories: [
@@ -65,7 +65,10 @@ const DUMMY_PRODUCTS = const [
     ],
     price: 100,
     title: 'Confrence T-shirt',
-    imageUrl: 'images/icons/buyicon.png',
+    imageUrl: Image.asset(
+      'images/icons/Delegates T-Shirt.jpg',
+      fit: BoxFit.cover,
+    ),
   ),
   product(
     id: 'm2',
@@ -74,8 +77,7 @@ const DUMMY_PRODUCTS = const [
     ],
     title: 'Fiber wristband',
     price: 20,
-    imageUrl:
-        'https://images.24hourwristbands.com/image/upload/f_auto,q_auto/shop_images/product/Cloth_Wristbands_592de6cd15b7c.png',
+    imageUrl: Image.asset('images/icons/buyicon.png'),
   ),
   product(
     id: 'm3',
@@ -84,8 +86,7 @@ const DUMMY_PRODUCTS = const [
     ],
     title: 'Rubber wristband',
     price: 50,
-    imageUrl:
-        'https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/72/998822/1.jpg?7745',
+    imageUrl: Image.asset('images/icons/Rubber Wristband (Normal).jpg'),
   ),
   product(
     id: 'm4',
@@ -94,16 +95,14 @@ const DUMMY_PRODUCTS = const [
     ],
     title: 'Glowing wristband',
     price: 80,
-    imageUrl:
-        'https://www.wristband.com/getmedia/b119b279-77d9-423c-bd1c-689aa9e4deeb/B3G-23-Green-Glow-in-Dark_SU.jpg.aspx?width=1500&height=900&ext=.jpg',
+    imageUrl: Image.asset('images/icons/Rubber Wristband (Glowing).JPG'),
   ),
   product(
     id: 'm5',
     categories: ['c3'],
     title: 'Conference Socks',
     price: 70,
-    imageUrl:
-        'https://wwws.dior.com/couture/ecommerce/media/catalog/product/cache/1/cover_image_1/870x580/17f82f742ffe127f42dca9de82fb58b1/G/9/1635929114_14SOC503A203_C520_E01_ZHC.jpg?imwidth=870',
+    imageUrl: Image.asset('images/icons/buyicon.png'),
   ),
   product(
     id: 'm6',
@@ -112,8 +111,10 @@ const DUMMY_PRODUCTS = const [
     ],
     title: 'Conference cap',
     price: 80,
-    imageUrl:
-        'https://4.imimg.com/data4/GL/TU/MY-13230786/colorfull-caps-500x500.jpg',
+    imageUrl: Image.asset(
+      'images/icons/buyicon.png',
+      fit: BoxFit.cover,
+    ),
   ),
   product(
     id: 'm7',
@@ -122,8 +123,7 @@ const DUMMY_PRODUCTS = const [
     ],
     title: 'Keychain',
     price: 20,
-    imageUrl:
-        'https://www.tradeinn.com/f/13816/138166482/belkin-f8w973btblu-secure-holder-keychain-for-airtag.jpg',
+    imageUrl: Image.asset('images/icons/Key Chain (Back Side).jpg'),
   ),
   product(
     id: 'm8',
@@ -132,8 +132,7 @@ const DUMMY_PRODUCTS = const [
     ],
     title: 'Conference Sticker',
     price: 90,
-    imageUrl:
-        'https://images-na.ssl-images-amazon.com/images/I/51FhJIF7h-L.__AC_SX300_SY300_QL70_FMwebp_.jpg',
+    imageUrl: Image.asset('images/icons/buyicon.png'),
   ),
   // product(
   //   id: 'm9',

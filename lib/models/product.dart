@@ -5,9 +5,9 @@ class product {
   final List<String> categories;
   final String title;
   final double price;
-  final String imageUrl;
+  Widget imageUrl;
 
-  const product(
+  product(
       {required this.id,
       required this.categories,
       required this.title,

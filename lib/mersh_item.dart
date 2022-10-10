@@ -23,10 +23,6 @@ class MershItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(15),
       child: Container(
         padding: const EdgeInsets.all(15),
-        child: Text(
-          title,
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
@@ -37,6 +33,10 @@ class MershItem extends StatelessWidget {
             end: Alignment.bottomRight,
           ),
           borderRadius: BorderRadius.circular(15),
+        ),
+        child: Text(
+          title,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
     );

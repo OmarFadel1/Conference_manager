@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 class ProductItem extends StatelessWidget {
   final String id;
   final String title;
-  final String imageUrl;
+  final Widget imageUrl;
   final double price;
   ProductItem(
       {required this.id,
@@ -29,16 +29,10 @@ class ProductItem extends StatelessWidget {
             Stack(
               children: <Widget>[
                 ClipRRect(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15),
-                      topRight: Radius.circular(15)),
-                  child: Image.network(
-                    imageUrl,
-                    height: 250,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(15),
+                        topRight: Radius.circular(15)),
+                    child: imageUrl),
                 Positioned(
                   bottom: 20,
                   right: 10,

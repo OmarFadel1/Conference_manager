@@ -48,10 +48,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               Container(
                 height: 30.h,
                 width: double.infinity,
-                child: Image.asset(
-                  selectedProduct.imageUrl,
-                  fit: BoxFit.cover,
-                ),
+                child: selectedProduct.imageUrl,
               ),
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10),
